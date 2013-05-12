@@ -1,0 +1,19 @@
+one:
+  name: '氧化铝'
+  desc: '氧化铝的描述'
+  picked: true
+  category: o
+
+two:
+  name: '二氧化钛'
+  desc: '二氧化钛的描述'
+  picked: true
+  category: o
+
+three:
+  name: '银'
+  desc: '银的描述'
+  picked: true
+  category: m
+  
+  

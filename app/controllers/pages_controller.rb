@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
   def index
-    render text: 'hello world'
+    @picked = Product.picked.all 
   end
 end

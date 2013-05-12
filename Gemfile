@@ -29,6 +29,7 @@ group :test, :development do
   gem 'rspec-rails', '~> 2.0'
 end
 gem 'simple_form'
+gem "paperclip", "~> 3.0"
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'

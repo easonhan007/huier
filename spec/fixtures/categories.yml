@@ -1,0 +1,11 @@
+o:
+  name: 氧化物
+  sort: 1
+
+s:
+  name: 硫化物
+  sort: 2
+
+m:
+  name: 金属
+  sort: 3

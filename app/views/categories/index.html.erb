@@ -1,0 +1,25 @@
+<h3>所有分类</h3>
+
+<table class="table table-striped">
+  <tr>
+    <th width="45%">分类名称</th>
+    <th width="40%" title="按照数字从大到小排序">排序</th>
+    <th colspan="2">操作</th>
+  </tr>
+
+<% @categories.each do |category| %>
+  <tr>
+    <td><%= category.name %></td>
+    <td><%= category.sort %></td>
+    <td><%= link_to(edit_category_path(category), class:'btn btn-mini') do %>
+        <i class="icon-edit"></i>编辑<% end %>
+    </td>
+    <td><%= link_to(category, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-mini') do %>
+        <i class="icon-remove"></i>删除<% end %>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+

@@ -1,0 +1,26 @@
+<% unless @picked.blank? %>
+  <% @picked.each_with_index do |p, index| %>
+    <% if row_start?(index) %>
+    <div class="row-fluid">
+    <ul class="thumbnails">
+    <% end #if %>
+      <li class="span4">
+        <div class="thumbnail"> 
+        <%= image_tag p.image.url(:thumb), 
+            'data-src' => 'holder.js/300x200',
+            width: '300px', height: '200px'
+        %>
+        <div class="caption">
+          <h3><%= p.name %></h3>
+          <p><%= p.desc %></p>
+          <p>
+            <%= link_to('查看详情', product_path(p), class: 'btn btn-primary') %>
+          </p>
+        </div>
+      </li>
+    <% if row_end?(index) %>
+      </ul>
+      </div>
+    <% end #if %>
+  <% end #each %>
+<% end #unless %>
