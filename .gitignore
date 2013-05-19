@@ -13,4 +13,14 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore vim swp files.
 *.swp
+
+# Ignore image files.
+*.jpg
+*.png
+*.gif
+
+# Ignore secert token file.
+config/initializers/secret_token.rb

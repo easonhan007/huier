@@ -1,0 +1,25 @@
+<%= products.in_groups_of(3) do |first, second, third| %>
+<div class="row_fluid">
+    <ul class="thumbnails">
+      <% [first, second, third].each do |p| %>
+        <% unless p.nil? %>
+          <li class="span4">
+            <div class="thumbnail">
+            <%= image_tag p.image.url(:thumb), 
+                'data-src' => 'holder.js/300x200',
+                width: '300px', height: '200px'
+            %>
+            <div class="caption">
+              <h3><%= p.name %></h3>
+              <p><%= p.desc %></p>
+              <p>
+                <%= link_to('查看详情', product_path(p), class: 'btn btn-primary') %>
+              </p>
+            </div>
+            </div>
+          </li>
+          <% end #unless %>
+        <% end #each %>
+  </ul>
+</div>
+<% end %>

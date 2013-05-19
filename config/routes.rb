@@ -1,8 +1,13 @@
 Huier::Application.routes.draw do
-  resources :categories
 
-
-  resources :products
+  namespace :admin do
+    resources :categories, :products
+    controller :sessions do
+      get "login" => :new
+      post "login" => :create
+      get "logout" => :destroy
+    end
+  end 
 
 
   # The priority is based upon order of creation:
@@ -54,7 +59,11 @@ Huier::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
+  get 'about' => 'pages#about'
+  get 'contact' => 'pages#contact'
   match 'pages' => 'pages#index'
+  match 'category/:id' => 'pages#category', as: :category
+  match 'product/:id' => 'pages#product', as: :product
   match 'pages/index' => 'pages#index', as: :home
   root :to => 'pages#index'
 

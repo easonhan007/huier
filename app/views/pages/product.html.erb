@@ -1,0 +1,9 @@
+<% unless @product.blank? %>
+<h2><%= @product.name %></h2>
+<div class="span6">
+  <%= image_tag @product.image.url(:medium) %>
+  <p style="margin-top: 1em;"><%= @product.desc %></p>
+</div>  
+<% else %>
+  <h3 class="text-error text-center">您所查看的产品不存在</h3>
+<% end %>

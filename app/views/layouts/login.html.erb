@@ -35,52 +35,14 @@
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
   </head>
   <body>
-
-    <div class="navbar navbar-fluid-top navbar-inverse">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="/admin/products">后台管理</a>
-          <div class="container-fluid nav-collapse">
-            <ul class="nav">
-              <li><%= link_to "添加产品", new_admin_product_path  %></li>
-              <li><%= link_to "添加分类", new_admin_category_path  %></li>
-              <li><%= link_to "所有产品", admin_products_path  %></li>
-              <li><%= link_to "所有分类", admin_categories_path  %></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
-
     <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span3">
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header">产品设置</li>
-              <li><%= link_to '添加产品', new_admin_product_path %></li>
-              <li><%= link_to '所有产品', admin_products_path %></li>
-            </ul>
-            <ul class="nav nav-list">
-              <li class="nav-header">分类设置</li>
-              <li><%= link_to '添加分类', new_admin_category_path %></li>
-              <li><%= link_to '所有分类', admin_categories_path %></li>
-            </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
-        <div class="span9">
-          <%= bootstrap_flash %>
-          <%= yield %>
-        </div>
-      </div><!--/row-->
+      <div class="row">
+        <%= bootstrap_flash %>
+        <%= yield %>
+      </div>
 
       <footer>
-        <p>&copy; Company 2013</p>
+        <p>&copy; 深圳惠尔 2013</p>
       </footer>
 
     </div> <!-- /container -->

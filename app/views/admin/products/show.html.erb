@@ -1,0 +1,32 @@
+<div class="span4">
+  <div class="thumb">
+    <%= image_tag @product.image.url(:thumb), 
+        'data-src' => 'holder.js/300x200',
+        width: '300px', height: '200px'
+    %>
+  </div>
+  <p>
+    <b>产品名称:</b>
+    <%= @product.name %>
+    <% unless @product.category.blank? %>
+      <span class="label">
+        <%= @product.category.name %>
+      </span>
+    <% end #unless %>
+    <% if @product.picked %>
+      <span class="label">主页显示</span>
+    <% end #if%>
+  </p>
+
+  <p>
+    <b>产品描述:</b>
+    <%= @product.desc %>
+  </p>
+
+  <div class="actions">
+    <%= link_to('编辑', edit_admin_product_path, class: 'btn btn-primary') %>
+    <%= link_to('返回', admin_products_path, class: 'btn') %>
+  </div>
+</div>
+
+

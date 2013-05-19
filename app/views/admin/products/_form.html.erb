@@ -1,0 +1,20 @@
+<%= simple_form_for([:admin, @product], html: {class: 'form-horizontal', multipart: true}) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name, label: '产品名称' %>
+    <%= f.input :desc, label: '产品描述',input_html: {rows: 5} %>
+    <%= f.association :category, label: '产品分类' %>
+    <div class="control-group">
+      <label class="control-label"><%= '产品图片' %></label>
+      <div class="controls">
+        <%= f.file_field :image %>
+      </div>
+    </div>
+    <%= f.input :picked, label: '在首页显示' %>
+  </div>
+  <div class="form-actions">
+    <%= f.button :submit, value:'提交', class: 'btn-primary' %>
+    <%= link_to '返回', admin_products_path, class: 'btn' %>
+  </div>
+<% end %>
