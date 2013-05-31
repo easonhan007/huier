@@ -7,7 +7,7 @@ class Category < ActiveRecord::Base
 
   validates :name, presence: true
 
-  def initialize
+  def initialize *args
     @active = false
     super
   end
