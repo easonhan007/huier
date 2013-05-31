@@ -31,6 +31,10 @@ end
 gem 'simple_form'
 gem "paperclip", "~> 3.0"
 
+group :production do
+  gem 'mysql2'
+end 
+
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
