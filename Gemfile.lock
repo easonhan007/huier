@@ -59,6 +59,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.21)
     multi_json (1.6.1)
+    mysql2 (0.3.11)
     paperclip (3.4.1)
       activemodel (>= 3.0.0)
       activerecord (>= 3.0.0)
@@ -137,6 +138,7 @@ DEPENDENCIES
   bcrypt-ruby (~> 3.0.0)
   coffee-rails (~> 3.2.1)
   jquery-rails
+  mysql2
   paperclip (~> 3.0)
   rails (= 3.2.9)
   rspec-rails (~> 2.0)
